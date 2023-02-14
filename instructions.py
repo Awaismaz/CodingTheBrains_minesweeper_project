@@ -15,7 +15,7 @@ Submission Method:
 4. The structure of code is present in awais_mazahir.py. Copy the code to newly created file and build your function
 5. Once results are correct, push your code to your github account and initiate a pull request by clicking on "Contribute" Button
 
-Logic Building:
+Code Requirements:
 
 1. You are required to create logic of minesweeper game. 
 2. Input received by your function will be will be a VARIABLE SIZED List.
