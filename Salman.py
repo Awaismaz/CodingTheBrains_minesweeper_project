@@ -6,7 +6,7 @@
 
 def minesweeper(A):
     #code that coverts the test matrix into desired output
-    input1 = input("Select the method\nPress 1 for method_1 and 2 for method_2 : ")
+    input1 = input("Select the method\nPress '1' for method_1 and '2' for method_2 : ")
 
         #   method  #  1:
     if input1 == '1':
