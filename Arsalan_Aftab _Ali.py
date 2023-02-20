@@ -3,13 +3,14 @@ def minesweeper(A):
     rows = len(A)
     cols = len(A[0])
 
-    grid = [list(A[i]) for i in range(cols)]
-    for i in range(rows):
-        for j in range(cols):
+    grid = [list(A[i]) for i in range(rows)]
+    
+    for i in range(rows+1):
+        for j in range(cols+1):
             count = 0
             if grid[i][j] == "X":
                 continue
-            if grid[i][j] == "O" and grid[i-1][j-1] == "X":
+            if grid[i-1][j] == "O" and grid[i-1][j-1] == "X":
                     count = count + 1
             if grid[i-1][j] == "O" and grid[i-1][j] == "X":
                     count = count + 1
@@ -26,7 +27,7 @@ def minesweeper(A):
             if grid[i-1][j] == "O" and grid[i+1][j+1] == "X":
                     count = count + 1    
              
-            grid[i][j]= count
+        grid[i-1][j]= count
     
     return grid
 
