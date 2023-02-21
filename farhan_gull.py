@@ -1,17 +1,4 @@
 def minesweeper(A):
-    rows=len(A)
-    cols=len(A[0])
-    A=[list(A[i]) for i in range (rows)]
-    for i in range (rows):
-        for j in range (cols):
-            if not A[i][j]=="X":
-                counter=0
-                for k in range (i-1,i+2):
-                    for l in range (j-1,j+2):
-                        if (-1<k<rows and -1<l<cols) and A[k][l]=="X":
-                            counter += 1
-                A[i][j]=str(counter)
-    A=["".join(A[i]) for i in range (rows)]  
     #code that coverts the test matrix into desired output
     return A
 
@@ -39,4 +26,3 @@ if __name__=="__main__":
     """
 
     print(minesweeper(test))
-
