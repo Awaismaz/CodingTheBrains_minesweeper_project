@@ -2,25 +2,20 @@ def minesweeper(A):
     #code that coverts the test matrix into desired output
     
     rows = len(A)  
-    col = len(A[0])
-    A = [list(A[a]) for a in range(rows)]
-
-    for s in range(rows):
-        for  t in range(col):
-            if not A[s][t] == 'X':
-                counter = 0
-                for u in range(s-1,s+2):
-                    for v in range(t-1,t+2):
-                        try:
-                            if not(u==-1 or  v==-1) and A[u][v] == 'X':
-                                counter+=1
-                        except:
-                            pass        
-                A[s][t] = str(counter)
+    cols = len(A[0])
+    A = [list(A[a]) for a in range(rows)]    
     
-    A = ["".join(A[a]) for a in range(rows)]
+    for b in range(rows):
+        for c in range(cols):
+            if not A[b][c] == 'X':
+                counter = 0
+                for d in range(max(0,b-1),min(rows,b+2)):
+                    for e in range(max(0,c-1),min(cols,c+2)):
+                        if A[d][e] == 'X':
+                            counter += 1
+                A[b][c] = str(counter)
+    A = [''.join(A[f]) for f in range(rows)]
     return A    
-
 if __name__=="__main__":
     
     test = ["XOOXXXOO", 
